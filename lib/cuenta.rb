@@ -4,6 +4,10 @@ class Cuenta
     end
 
     def getBalance()
-        return 0
+        return @balance
+    end
+
+    def depositar(monto)
+        @balance=@balance+monto
     end
 end
