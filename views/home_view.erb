@@ -1,11 +1,22 @@
 <div>
-El balance de tu cuenta es: 
+El balance de tu cuenta es: <%= @balance%>
 <br>Monto:
-<input id = "monto" name="monto" type="number">
 
-<form method="post" action="depositar">
-<input id="depositar" name="depositar" type="submit" value="Depositar">
+
+
+
+
+
+
+<form method="post">
+<input id = "monto" name="monto" type="number" >
+<input action="depositar" id="depositar" name="depositar" type="submit" value="Depositar">
+<input action="retirar"  id="retirar" name="retirar" type="submit" value="Retirar">
 </form>
+
+
+
+
 
 </div>
 

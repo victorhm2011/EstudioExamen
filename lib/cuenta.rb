@@ -8,6 +8,12 @@ class Cuenta
     end
 
     def depositar(monto)
-        @balance=@balance+monto
+        
+        @balance=@balance+monto.to_i
+    end
+
+    def retirar(monto)
+        
+        @balance=@balance-monto.to_i
     end
 end

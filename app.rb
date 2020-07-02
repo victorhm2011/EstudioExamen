@@ -1,11 +1,21 @@
 require 'sinatra'
+require './lib/cuenta.rb'
 
-
+@@cuenta=Cuenta.new
 
 get '/' do
+    @balance=@@cuenta.getBalance()
     erb:home_view
 end
 
 post '/depositar' do
-    "El balance de tu cuenta es: 1000"
+    @@cuenta.depositar(params[:monto])
+    @balance=@@cuenta.getBalance()
+    erb:home_view
   end
+
+post '/retirar' do
+    @@cuenta.retirar(params[:monto])
+    @balance=@@cuenta.getBalance()
+    erb:home_view
+end
